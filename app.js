@@ -4,19 +4,32 @@
 //   searchMovie()
 // })
 
+
+const loaderDiv = document.querySelector('.loader');
+
+function showloader() {
+   loaderDiv.classList.add('show');
+}
+
+function hideloader() {
+   loaderDiv.classList.remove('show');
+}
+
+
+
 async function searchMovie(event) {
-   event.preventDefault();
-   document.getElementById("loading-screen").style.display = "flex";
-   const id = event.target.value
-   const post = await (fetch(`http://www.omdbapi.com/?s=${id}&page&apikey=6a63793f&`))
-   const postData = await post.json()
-   console.log(postData)
+   showloader();
+   const id = event.target.value;
+   const post = await (fetch(`http://www.omdbapi.com/?s=${id}&page&apikey=6a63793f&`));
    
-   const movieListEl = document.querySelector(".posts")
+   const postData = await post.json();
+   // console.log(postData)
+   const movieListEl = document.querySelector(".posts");
+   hideloader()
    movieListEl.innerHTML = postData.Search
       .map((
-         (data) =>
-         `<div class="posts">
+         (data) => 
+            `<div class="posts">
             <div class="movie__poster">
                <img src="${data.Poster}">
             </div>
@@ -30,11 +43,15 @@ async function searchMovie(event) {
                </div>
             </div>   
          </div>`
-      )).join("")
-      setTimeout(() => {
-         document.getElementById("loading-screen").style.display = "none";
-      }, 5000)
+      )).join("");
+      
 }
+
+
+
+
+
+
 
 
 
