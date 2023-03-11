@@ -8,15 +8,20 @@
    <title>Document</title>
 </head>
 <body>
+   <div class="nav__background">
+      <figure class="background__img">
+         <img class="background__img" src="https://img.freepik.com/free-vector/movie-film-strip-blue-background_1017-33458.jpg" alt="">
+      </figure>
+   </div>
    <section id="navbar">
       <div class="nav__background">
          <figure class="background__img">
-            <img src="./assets/wp2411592-theatre-wallpapers.jpg" alt="">
+            <img class="background__img" src="https://img.freepik.com/free-vector/movie-film-strip-blue-background_1017-33458.jpg" alt="">
          </figure>
       </div>
       <div class="nav__container">
          <figure class="navbar__img--wrapper">
-            <img class="navbar__img" src="./assets/ViewFinder.png" alt="">
+            <img class="navbar__img" src="./assets/large-removebg-preview.png" alt="">
          </figure>
          <ul class="nav__list">
             <li class="nav__links">
@@ -30,8 +35,8 @@
             </li>
          </ul>
       </div>
-      
    </section>
+   <!-- Search Bar -->
    <section id="search__bar">
       <div class="search__container">
          <input type="text" name="" placeholder="Search" onchange="searchMovie(event)" id="search" class="search__bar">
@@ -39,18 +44,20 @@
             🔍
          </button>
       </div>
+      
    </section>
+   <!-- Loader Annimation -->
    <section>
       <div class="loader-wrapper">
          <span class="loader"><span class="loader-inner"></span></span>
      </div>
    </section>
+   <!-- Movie info -->
    <section id="movie">
       <div class="posts">
         
       </div>
    </section>
-   
 </body>
    <script src="./app.js"></script>
 </html>

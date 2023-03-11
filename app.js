@@ -29,18 +29,18 @@ async function searchMovie(event) {
    movieListEl.innerHTML = postData.Search
       .map((
          (data) => 
-            `<div class="posts">
-            <div class="movie__poster">
-               <img src="${data.Poster}">
-            </div>
+         `<div class="posts">
             <div class= "info__wrapper">
-               <div class="movie__title">
-                  <h2>${data.Title}</h2>
+               <div class="movie__poster">
+                  <img class="poster" src="${data.Poster}">
                </div>
-               <div class="movie__rating">
-                  <h6>${data.Year}</h6>
-                  <h6>${data.Type}</h6>
-               </div>
+                  <div class="movie__title">
+                     <h2>${data.Title}</h2>
+                  </div>
+                  <div class="movie__rating">
+                     <h6>${data.Year}</h6>
+                     <h6>${data.Type}</h6>
+                  </div>
             </div>   
          </div>`
       )).join("");
