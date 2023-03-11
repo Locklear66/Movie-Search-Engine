@@ -107,7 +107,8 @@ Navbar
 }
 
 .navbar__img--wrapper{
-  width: 20%;
+  width: 100%;
+  max-width: 20vh;
   padding-left: 42px;
   padding-top: 12px;
 }
@@ -115,6 +116,7 @@ Navbar
 .navbar__img{
   border: 1px solid black;
   border-radius: 12px;
+  
 }
 
 .nav__list{
@@ -196,7 +198,7 @@ Search Bar
    background-color: transparent;
    text-align: center;
    border: 1px solid black;
-   padding: 0 60px 0px 60px;
+   padding: 0 50px 0px 50px;
 }
 
 .search__btn{
@@ -270,3 +272,19 @@ Movies
   border-radius: 12px;
 }
 
+/* Phones */
+
+@media(max-width:480px){
+  .navbar__img--wrapper{
+    display: none;
+  }
+
+  .nav__container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__list{
+    margin-top: 32px;
+  }
+}
