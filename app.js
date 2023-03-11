@@ -20,7 +20,7 @@ function hideloader() {
 async function searchMovie(event) {
    showloader();
    const id = event.target.value;
-   const post = await (fetch(`http://www.omdbapi.com/?s=${id}&page&apikey=6a63793f&`));
+   const post = await (fetch(`https://www.omdbapi.com/?s=${id}&page&apikey=6a63793f&`));
    
    const postData = await post.json();
    // console.log(postData)
