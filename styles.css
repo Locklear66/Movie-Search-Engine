@@ -125,10 +125,6 @@ Navbar
   margin-right:42px;
 }
 
-.nav__link{
-
-}
-
 /* 
 
 Nav background img
@@ -185,6 +181,14 @@ Loading state
 Search Bar
 
 */
+
+.logo__wrapper{
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-style: italic;
+}
 
 .search__container{
   display: flex;
