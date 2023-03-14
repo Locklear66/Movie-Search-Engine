@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./contact.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("VtEkEzmiw7x1vGiMo");
+        })();
+     </script>
+     <title>Contact</title>
+</head>
+<body>
+    <section id="nav">
+        <div class="navbar">
+            <div class="nav__container">
+                <p class="nav__title"> <a class="nav__title" href="../index.html">Send me an Email!</a></p>
+            </div>
+        </div>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <form onsubmit="contact(event)">      
+                    <input name="user_name" type="text" class="feedback-input" placeholder="Name" />   
+                    <input name="user_email" type="email" class="feedback-input" placeholder=email />
+                    <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+                    <input type="submit" value="SUBMIT"/>
+                  </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
